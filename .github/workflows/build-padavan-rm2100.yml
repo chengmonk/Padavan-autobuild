@@ -36,7 +36,7 @@ jobs:
         libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/vb1980/Padavan-KVR.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/chengmonk/Padavan-KVR.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
@@ -94,7 +94,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> .config #网易云解锁GO版本执行文件（4M多）注意固件超大小,不集成会自动下载
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> .config #zerotier ~1.3M
         echo "CONFIG_FIRMWARE_ENABLE_IPV6=y" >> .config # 设置IPv6
-        echo "CPU_CLOCK=1200" >> .config # CPU超频到1200mhz
+        echo "CONFIG_FIRMWARE_CPU_900MHZ=y" >> .config # CPU超频   具体数值在\rt-n56u\trunk\linux-3.4.x\arch\mips\rt2880\init.c
         
 
         #########################################################################################
