@@ -43,7 +43,7 @@ jobs:
     - name: Build Firmware
       env:
         TNAME: RM2100   # 配置文件名 
-        MHZ: 1200       # CPU超频频率 必须为20的倍数。开启超频请修改124行超频选项
+        MHZ: 1100       # CPU超频频率 必须为20的倍数。开启超频请修改124行超频选项
       run: |
         cd /opt/rt-n56u/trunk
         
